@@ -1,0 +1,65 @@
+Agent-Zero Project File Structure
+
+1. Root Directory:
+   - agent.py: Contains the main Agent class and AgentConfig, handling core agent functionality.
+   - main.py: Implements the main application loop, user interaction, and initialization.
+   - models.py: Provides functions for interacting with various language models.
+   - example.env: Example environment file for configuration settings.
+   - requirements.txt: Lists project dependencies.
+   - README.md: Project documentation and usage instructions.
+   - LICENSE: Project license information.
+
+2. docker/
+   - Dockerfile: Contains instructions for building the project's Docker image.
+   - build.txt: Instructions or logs related to the Docker build process.
+   - initialize.sh: Shell script for initializing the Docker container.
+   - .bashrc: Bash configuration file for the Docker environment.
+
+3. docs/
+   Contains project documentation, images, and guides:
+   - win_installation_guide.txt: Windows installation instructions.
+   - Various image files (e.g., splash.webp, intro_vid.jpg) for documentation or UI.
+
+4. logs/
+   Directory for storing application logs.
+
+5. memory/
+   Directory for persistent memory storage.
+
+6. prompts/
+   Contains markdown files with various prompts used by the agent:
+   - agent.memory.md, agent.system.md, agent.tools.md: Core agent prompts.
+   - fw.*.md: Framework-related prompts for different scenarios.
+   - msg.*.md: Message-related prompts.
+   - tool.*.md: Tool-related prompts.
+
+7. python/
+   a. helpers/
+      - dirty_json.py: Likely a helper for handling malformed JSON.
+      - docker.py: Docker-related helper functions.
+      - duckduckgo_search.py, perplexity_search.py: Search engine integrations.
+      - errors.py: Custom error handling.
+      - extract_tools.py: Functions for extracting tool information.
+      - files.py: File handling utilities.
+      - messages.py: Message processing helpers.
+      - print_style.py: Styling for console output.
+      - rate_limiter.py: Implementation of rate limiting.
+      - shell_local.py, shell_ssh.py: Local and SSH shell execution helpers.
+      - timed_input.py: Utility for timed user input.
+      - tool.py: Base class or utilities for tools.
+      - vdb.py, vector_db.py: Vector database implementations.
+
+   b. tools/
+      - call_subordinate.py: Tool for calling subordinate agents.
+      - code_execution_tool.py: Tool for executing code.
+      - knowledge_tool.py: Tool for accessing knowledge bases.
+      - memory_tool.py: Tool for memory operations.
+      - online_knowledge_tool.py: Tool for accessing online information.
+      - response.py: Handling tool responses.
+      - task_done.py: Tool for marking tasks as complete.
+      - unknown.py: Handling unknown tool requests.
+
+8. work_dir/
+   A directory for temporary work files or outputs.
+
+This file structure reflects a well-organized Python project with clear separation of concerns. The project is designed to be modular and extensible, with separate directories for different components such as prompts, tools, and helpers. The presence of a Docker directory suggests that the project is containerized for easy deployment and consistency across environments.

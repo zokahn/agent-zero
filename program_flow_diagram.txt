@@ -1,0 +1,40 @@
+Agent-Zero Program Flow Diagram
+
+[User Input] --> [Main Loop]
+                  |
+                  v
+[Agent Message Processing]
+    |
+    +--> [Prompt System] --> [Language Model]
+    |
+    +--> [Tool Execution]
+    |     |
+    |     +--> [Code Execution Tool]
+    |     +--> [Knowledge Tool]
+    |     +--> [Memory Tool]
+    |     +--> [Online Knowledge Tool]
+    |     +--> [Task Done Tool]
+    |     +--> [Unknown Tool]
+    |
+    +--> [Memory Management]
+    |     |
+    |     +--> [Vector Database]
+    |     +--> [Memory Cleanup]
+    |
+    +--> [Subordinate Agent Calls]
+    |
+    +--> [Error Handling]
+    |
+    v
+[Agent Response] --> [User Output]
+
+Key Points:
+1. The main loop handles user input and agent interactions.
+2. Agent message processing is the core of the system, utilizing various components.
+3. The prompt system and language model integration are crucial for generating responses.
+4. Tools are executed based on the agent's decisions, with special attention to their output.
+5. Memory management ensures efficient storage and retrieval of information.
+6. The system supports multi-agent interactions through subordinate agent calls.
+7. Error handling is implemented throughout the process for robustness.
+
+This diagram illustrates the flow of information and control in the Agent-Zero system, highlighting the importance of tool execution and their outputs in the overall process.
